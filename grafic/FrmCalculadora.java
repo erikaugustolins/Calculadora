@@ -14,6 +14,8 @@ public class FrmCalculadora  extends JFrame{
     private JTextField txtNum;
     private JTextField txtTNum;
     private JComboBox <String> cmbaction;
+    private JButton btnCalcular;
+    private JComboBox<String> CMBOperador;
 
 
 
@@ -29,5 +31,20 @@ public FrmCalculadora (){
         add(new JLabel("Valor 2:"));
         add(txtNum = new JTextField(15));
 
+        
+
+
+        add(new JLabel("Operação:"));
+        
+        String items[] = {"Soma", "Subtração", "Divisão", "Multiplicação "};
+        add(CMBOperador = new JComboBox<String>(items));
+
+        add(btnCalcular = new JButton("Calcular"));
+
+
+        ActionCalcular action = new ActionCalcular (CMBOperador,txtTNum,txtNum);
+        btnCalcular.addActionListener(action);
+
+    
 }
 }

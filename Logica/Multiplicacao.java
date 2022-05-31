@@ -1,21 +1,21 @@
 package Logica;
-public class Soma extends Operadores{
+public class Multiplicacao extends Operadores{
 
     private double X;
     private double Y;
 
-    public Soma(){}
+    public Multiplicacao(){}
 
     @Override
     public double calcularResultado() {
         
-        return X + Y;
+        return X * Y;
     }
 
     @Override
     public String PreencherOperador() {
         // TODO Auto-generated method stub
-        return "Soma";
+        return "Multiplicação";
     };
 
     
